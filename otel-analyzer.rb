@@ -5,20 +5,20 @@
 class OtelAnalyzer < Formula
   desc "Analyze OpenTelemetry traces to identify performance bottlenecks"
   homepage "https://github.com/stefanpenner/otel-analyzer"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stefanpenner/otel-analyzer/releases/download/v0.2.0/otel-analyzer_darwin_amd64.tar.gz"
-      sha256 "f644907aa2c06d2a36564e69e2f9aee40c81d13200b81e28525cfc763cc0de99"
+      url "https://github.com/stefanpenner/otel-analyzer/releases/download/v0.2.1/otel-analyzer_darwin_amd64.tar.gz"
+      sha256 "0f2b160248ccb2d485f5d12930562bd336a1d683dad834233dc5ea51116d90cd"
 
       define_method(:install) do
         bin.install "otel-analyzer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stefanpenner/otel-analyzer/releases/download/v0.2.0/otel-analyzer_darwin_arm64.tar.gz"
-      sha256 "013f88a2e1d1060aa7f42be6e2792cd7889db58f88eab9422d97c78ef6aa4047"
+      url "https://github.com/stefanpenner/otel-analyzer/releases/download/v0.2.1/otel-analyzer_darwin_arm64.tar.gz"
+      sha256 "1f95f123fd7f5e8debe9bf599a28ef60646f499e4a8e04db64f238ae0d7b9fae"
 
       define_method(:install) do
         bin.install "otel-analyzer"
@@ -28,15 +28,15 @@ class OtelAnalyzer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stefanpenner/otel-analyzer/releases/download/v0.2.0/otel-analyzer_linux_amd64.tar.gz"
-      sha256 "c5ce67317e0026fc075662dd0ccf5ddacd103679ac4f32e6b80cd7d4bde665a1"
+      url "https://github.com/stefanpenner/otel-analyzer/releases/download/v0.2.1/otel-analyzer_linux_amd64.tar.gz"
+      sha256 "46d3a54f42e0d794ec03b5936fe100b86018b58c726dcd7a40adf8a9114c397f"
       define_method(:install) do
         bin.install "otel-analyzer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stefanpenner/otel-analyzer/releases/download/v0.2.0/otel-analyzer_linux_arm64.tar.gz"
-      sha256 "5b3359befefd736b19fd0e23b796d54a992aa89b84b2652581d0c5aea760e40d"
+      url "https://github.com/stefanpenner/otel-analyzer/releases/download/v0.2.1/otel-analyzer_linux_arm64.tar.gz"
+      sha256 "1adb998bdb94db0c34fc25b944036e003457c301d95d96151022ad8051abdb33"
       define_method(:install) do
         bin.install "otel-analyzer"
       end
