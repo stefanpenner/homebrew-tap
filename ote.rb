@@ -5,12 +5,12 @@
 class Ote < Formula
   desc "Analyze OpenTelemetry traces to identify performance bottlenecks"
   homepage "https://github.com/stefanpenner/otel-explorer"
-  version "0.6.0"
+  version "0.6.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stefanpenner/otel-explorer/releases/download/v0.6.0/otel-explorer_darwin_amd64.tar.gz"
-      sha256 "9647a7055df59a4484e9c79b678fc28f99d2627b6c37956e195042e98016e5ca"
+      url "https://github.com/stefanpenner/otel-explorer/releases/download/v0.6.1/otel-explorer_darwin_amd64.tar.gz"
+      sha256 "713ef05f14c88c450e86a0a5a9c6c1735acd6e10d893c31c86208aefb20a2209"
 
       define_method(:install) do
         bin.install "ote"
@@ -18,8 +18,8 @@ class Ote < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stefanpenner/otel-explorer/releases/download/v0.6.0/otel-explorer_darwin_arm64.tar.gz"
-      sha256 "026ffe2fbedbb4f6565d671e0612696caef1dc70383d1cbbceb56b95e69f2f24"
+      url "https://github.com/stefanpenner/otel-explorer/releases/download/v0.6.1/otel-explorer_darwin_arm64.tar.gz"
+      sha256 "7df65909cc24e319af2b32f4d2f9b16ed246e9ed4296d6c43436eb999c8350c0"
 
       define_method(:install) do
         bin.install "ote"
@@ -30,16 +30,16 @@ class Ote < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stefanpenner/otel-explorer/releases/download/v0.6.0/otel-explorer_linux_amd64.tar.gz"
-      sha256 "4576dcc124029a3c270442e5c4bbef9768345cf7d82948fd0c8441446d38423d"
+      url "https://github.com/stefanpenner/otel-explorer/releases/download/v0.6.1/otel-explorer_linux_amd64.tar.gz"
+      sha256 "4189a23080bd714f3580db7ba8f7e1e5783cb74324d44490c8d48e78f686d1c9"
       define_method(:install) do
         bin.install "ote"
         bin.install_symlink "ote" => "otel-explorer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stefanpenner/otel-explorer/releases/download/v0.6.0/otel-explorer_linux_arm64.tar.gz"
-      sha256 "789b96e06c1e2434a3aa8fb7aff076d06f84402e1ca7000476da35950b914c76"
+      url "https://github.com/stefanpenner/otel-explorer/releases/download/v0.6.1/otel-explorer_linux_arm64.tar.gz"
+      sha256 "dcbf7b9b65ade4ac1158a9bed598bb4d13a4ecd7bf86ee6d72c7eab65a60dca8"
       define_method(:install) do
         bin.install "ote"
         bin.install_symlink "ote" => "otel-explorer"
