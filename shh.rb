@@ -5,21 +5,21 @@
 class Shh < Formula
   desc "Commit your secrets. Yes, really."
   homepage "https://github.com/stefanpenner/shh"
-  version "0.6.0"
+  version "0.6.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stefanpenner/shh/releases/download/v0.6.0/shh_darwin_amd64.tar.gz"
-      sha256 "4e3ec6a5fac3d423e3bd883af2f24e52a04afb8c07a60b5384f0eef5a16bf806"
+      url "https://github.com/stefanpenner/shh/releases/download/v0.6.1/shh_darwin_amd64.tar.gz"
+      sha256 "833e1ed193c9bcb6b6e4c59acedfd66fe53a935f35dd3044d8dbd12438d5f6d0"
 
       define_method(:install) do
         bin.install "shh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stefanpenner/shh/releases/download/v0.6.0/shh_darwin_arm64.tar.gz"
-      sha256 "b69729b7a06c405adfd323ce655d985ae67d7b28a7d04ce1a1699227d25f62ea"
+      url "https://github.com/stefanpenner/shh/releases/download/v0.6.1/shh_darwin_arm64.tar.gz"
+      sha256 "16b535f805de2ea9f32e345f7f130e50f7aa4ad8c953dfb62ef0ef54e370bf2b"
 
       define_method(:install) do
         bin.install "shh"
@@ -29,15 +29,15 @@ class Shh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stefanpenner/shh/releases/download/v0.6.0/shh_linux_amd64.tar.gz"
-      sha256 "0e3b48ff8f5dc57dac5291dc70e4472c1aab04315f547b2fa73f14f91cbbe822"
+      url "https://github.com/stefanpenner/shh/releases/download/v0.6.1/shh_linux_amd64.tar.gz"
+      sha256 "1f48693f289dede7cf3bbcb0e17ed1047d4ddd417fc0031ed86c6d41f307c0fe"
       define_method(:install) do
         bin.install "shh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stefanpenner/shh/releases/download/v0.6.0/shh_linux_arm64.tar.gz"
-      sha256 "cdf2f23652790711ad8e62b581953521e91e49aabad241eab04ef000246c36e3"
+      url "https://github.com/stefanpenner/shh/releases/download/v0.6.1/shh_linux_arm64.tar.gz"
+      sha256 "f10ca88c4e403f8308f0fbf89d68e0a45df61eefb2fca9f3ad3e7e343f110c20"
       define_method(:install) do
         bin.install "shh"
       end
